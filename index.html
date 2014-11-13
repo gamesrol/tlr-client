@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="Tomalared">
+	<head>		
+		<title>::Tomalared:: {{pageName}}</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">  
+		<link rel="stylesheet" href="css/main.css">    
+
+		<script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+		<script src="http://code.angularjs.org/1.1.5/angular.js"></script>
+		<script src="http://code.angularjs.org/1.1.5/angular-cookies.js"></script>
+		<script src="http://m-e-conroy.github.io/angular-dialog-service/javascripts/dialogs.min.js"></script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controller.js"></script>
+	</head>
+
+	<body>
+		<header class="fixed topbar" id="topbar" ng-controller="login">	
+			<div class="searcher">	
+				<form>
+					<div class="row">
+					 	<div class="col-lg-6">
+					  		<div class="titulo">	
+								<img src="gfx/LogoWhiteSombra.png" class="linkRemote titulo">
+							</div>
+						</div>
+					  <div class="col-lg-3">
+					    <div class="input-group">
+					      <input type="text" name="user" placeholder="Nick" class="form-control halt" id="login_user" ng-model="user.name">
+					      <input type="password" name="password" placeholder="Password" class="form-control halt" id="login_password" ng-model="user.password">				      
+				          <span class="input-group-btn">
+					        <button class="btn btn-default" type="button" ng-click="login()"  ng-disabled="!user.name || !user.password" ><span class="glyphicon glyphicon-log-in"></span></button>
+					      </span>
+					    </div>				  
+					  </div>
+					  <div class="col-lg-2 menu">  
+						  <span class="input-group-addon">
+					        <input type="checkbox" name="remember_me" id="remember_me" > Recuerdame | Olvide contraseña 
+					      </span>										
+					  </div>
+				  	</div>
+				</form>
+			</div>			
+		</header>
+
+		<div class="container">
+			<div>
+				<section class="login">
+					<div id="error"></div>									
+					<div id="yield" ng-view class="contenido"></div>
+				</section>
+				
+				<input type="hidden" id="remote" name="remote" value="" />
+				<input type="hidden" id="destinatario" value="<%=@destinatario%>"/>
+				<div id="cargandoPag" align="center" style="display: none">
+				    <%= image_tag("/gfx/pagina.gif", :title => "Cargando", :alt => "Cargando", :id=> 'loarding') %>
+				</div>
+			</div>		
+		</div>
+		
+		<footer id="footer">
+			<a href="http://ozimodo.rubyforge.org/">Ozimodo</a> ~  
+			<a href="http://rubyonrails.org/">RubyOnRails</a> 					
+		</footer>
+	</body>
+</html>
