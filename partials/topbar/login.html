@@ -1,0 +1,23 @@
+<form>
+	<div class="row">
+	 	<div class="col-lg-6">
+	  		<div class="titulo">	
+				<img src="gfx/LogoWhiteSombra.png" class="linkRemote titulo">
+			</div>
+		</div>
+	  <div class="col-lg-3">
+	    <div class="input-group">
+	      <input type="text" name="user" placeholder="Nick" class="form-control halt" id="login_user" ng-model="userName">
+	      <input type="password" name="password" placeholder="Password" class="form-control halt" id="login_password" ng-model="userPassword">				      
+          <span class="input-group-btn">
+	        <button class="btn btn-default" type="button" ng-click="login()"  ng-disabled="!userName || !userPassword" ><span class="glyphicon glyphicon-log-in"></span></button>
+	      </span>
+	    </div>				  
+	  </div>
+	  <div class="col-lg-2 menu">  
+		  <span class="input-group-addon">
+	        <input type="checkbox" name="remember_me" id="remember_me" > Recuerdame | Olvide contraseña 
+	      </span>										
+	  </div>
+  	</div>
+</form>

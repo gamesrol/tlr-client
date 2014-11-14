@@ -4,8 +4,8 @@ var urlServer= "http://77.230.212.178:3000";
 app.config(['$routeProvider', function($routeProvider) {	
     $routeProvider.
       when('/', {
-        templateUrl: 'partials/login.html',
-        controller: 'start'
+        templateUrl: 'partials/createUser.html',
+        controller: 'createUser'
       }).
       when('/posts', {
         templateUrl: 'partials/login.html',
