@@ -1,27 +1,15 @@
 <div id="reg" class="row">
 	<h1>Registrate</h1>
 	<form>
-	<div class="registro">
-		<ul>
-			<li class="field">
-				<input type="text" name="name" id="user_name" placeholder="Name" class="form-control"/>  
-			</li>
-			<li class="field">
-				<input type="text" name="profile" id="user_profile" placeholder="Profile" class="form-control"/>  
-			</li>
-			<li class="field">
-				<input type="text" name="email" id="user_email" placeholder ="Email" class="form-control"/>
-			</li>
-			<li class="field">
-				<input type="password" name="password" id="user_password" placeholder ="Password" class="form-control"/>
-			</li>
-			<li class="field">
-				<input type="password" name="password_confirmation" id="user_password_confirmation" placeholder="Password Confirmation" class="form-control"/><br>
-			</li>
-		</ul>
-		<input type="checkbox" name="accept" id="user_accept"/>Acceptar
-	</div>
-		<a id="crearUser" onclick="createUser();">Create</a>
+		<div>
+			<input type="text" name="name" id="user_name" placeholder="Name" class="form-control" ng-model="userName"/>  
+			<input type="text" name="profile" id="user_profile" placeholder="Profile" class="form-control" ng-model="userProfile"/>  
+			<input type="text" name="email" id="user_email" placeholder ="Email" class="form-control" ng-model="userEmail"/>
+			<input type="password" name="password" id="user_password" placeholder ="Password" class="form-control" ng-model="userPassword"/>
+			<input type="password" name="password_confirmation" id="user_password_confirmation" placeholder="Password Confirmation" class="form-control" ng-model="userPasswordConfirmated"/>
+			<button id="crearUser" ng-click="create()" class="form-control" >Crear usuarios</button>
+			<input type="checkbox" name="accept" id="user_accept" class="form-control"/><label for="user_accept">Acceptar condiciones</label>
+		</div>
 	<form>
 	
 </div>

@@ -1,11 +1,11 @@
 <form>
 	<div class="row">
-	 	<div class="col-lg-6">
-	  		<div class="titulo">	
-				<img src="gfx/LogoWhiteSombra.png" class="linkRemote titulo">
+	 	<div id="titulo" class="col-lg-4">
+	  		<div>	
+				<img src="gfx/LogoWhiteSombra{{connection}}.png" class="linkRemote titulo">
 			</div>
 		</div>
-	  <div class="col-lg-3">
+	  <div id="logeo" class="col-lg-4">
 	    <div class="input-group">
 	      <input type="text" name="user" placeholder="Nick" class="form-control halt" id="login_user" ng-model="userName">
 	      <input type="password" name="password" placeholder="Password" class="form-control halt" id="login_password" ng-model="userPassword">				      
@@ -14,9 +14,9 @@
 	      </span>
 	    </div>				  
 	  </div>
-	  <div class="col-lg-2 menu">  
+	  <div id="loginOption" class="col-lg-2">  
 		  <span class="input-group-addon">
-	        <input type="checkbox" name="remember_me" id="remember_me" > Recuerdame | Olvide contraseña 
+	        <input type="checkbox" name="remember_me" id="remember_me" ><label for="remember_me"> Recuerdame</label> | <label>Olvide contraseña </label>
 	      </span>										
 	  </div>
   	</div>
