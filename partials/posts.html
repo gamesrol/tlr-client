@@ -20,8 +20,7 @@
 				{{post.created_at}}	
 			</span>
 			
-			<div class="text"  ng-bind-html-unsafe="text | parseUrlFilter:'_blank':'otherProperty'">{{ post.content | postsParse }}</div>
-
+			<div class="text" ng-bind-html="post.content | postsParse"></div>				
 			<div class="postFooter">
 				<span class="tag" > #tags</span>			
 			</div>
@@ -33,5 +32,5 @@
 		comentarios		
 	</footer>
 	
-	<input type="hidden" id="created_at_<%= post.id %>" class="created_at" value="<%= post.created_at %>"/>
+	<input type="hidden" id="post_{{post.id}}" class="created_at" value="{{post.created_at}}"/>
 </div>

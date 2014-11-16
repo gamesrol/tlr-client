@@ -77,7 +77,6 @@ app.controller('createUser', function($scope, $http, $cookieStore,$dialogs, $loc
 });
 
 app.controller('posts', function($scope, $http, $cookieStore, $location) {
-	
 	if(!$cookieStore.get('user')){		 
 	  	$location.path("/");  		
   	}else{
@@ -85,10 +84,7 @@ app.controller('posts', function($scope, $http, $cookieStore, $location) {
 		var responsePromise = $http.get(urlServer+"/posts/"+user.id);
 
 		responsePromise.success(function(posts) {	    
-			for (post in posts) { 
-				post.content = "sdafdf";
-				//String(post.content).replace(/(?:https:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g, '<iframe width="200" height="100" src="http://www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>').replace(/(?:http:\/\/)?(?:www\.)?(?:vimeo\.com)\/(.+)/g, '<iframe src="//player.vimeo.com/video/$1" width="200" height="100" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
-			}				
+			//String(post.content).replace(/(?:https:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g, '<iframe width="200" height="100" src="http://www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>').replace(/(?:http:\/\/)?(?:www\.)?(?:vimeo\.com)\/(.+)/g, '<iframe src="//player.vimeo.com/video/$1" width="200" height="100" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
 			$scope.posts = posts;			
 		});
   	}  	
