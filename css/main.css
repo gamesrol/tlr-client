@@ -7,6 +7,26 @@ body
   color: #000;
 }
 
+a, a:hover{
+  text-decoration: none;
+}
+
+h1{
+  text-align: center;
+}
+
+iframe{
+  width: 100%;
+  height: 400px;
+}
+
+form{
+  margin: 0 auto;
+  width: 210px;   
+  display: block;  
+
+}
+
 #topbar
 {
   position :fixed;
@@ -32,11 +52,6 @@ body
   position: relative;
   top: 62px;  
   margin-bottom: 62px;
-  border: 1px solid #ccc;
-  background-image: url("../gfx/tomalared.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: rgba(204,204,204,0.9);
 }
 
 #createUser
@@ -45,22 +60,29 @@ body
   top: 62px;  
   margin-bottom: 62px;
   border: 1px solid #ccc;
-  background-image: url("../gfx/tomalared.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: rgba(204,204,204,0.9);
 }
 
 #reg
 {  
-
-  width: 100%;  
+  background-image: url("../gfx/tomalared.svg");  
+  background-repeat: no-repeat;
+  background-position: center center;  
   text-align: center;   
   color: black;
   padding-bottom: 10px;
   margin: 0 auto;
   display: block;
-  width: 210px;  
+  width: 100%;  
+  border: 1px solid #ccc;    
+  background-color: rgba(204,204,204,0.9);
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+}
+
+#logout button{
+  float: right;
+  margin-left: 5px;
 }
 
 #footer
@@ -88,14 +110,64 @@ body
   margin-bottom: 3px;
 }
 
+#form-new{
+  text-align: right;
+  overflow: hidden;
+  background: transparent;
+}
+
 .halt{
   width: 50% !important;
   float: left !important;  
 }
 
+.right{
+  float: right;
+}
+
 .form-control{
   text-align: center;
 }
+
+.post, #menuLeft{  
+  border: 1px solid #ccc;    
+  background-color: rgba(204,204,204,0.9);
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  width: 100%; 
+  padding: 0px;
+  overflow: hidden;
+}
+
+.post img{  
+  width: 100%;  
+}
+
+.postMuneco{
+  width: 30%;
+  float: left;
+  text-align: left;
+}
+
+.postMuneco img{
+  width: 20%;
+}
+
+
+.postIconos{
+  float: right;
+}
+
+.postText{
+  display: block;
+  clear: both;
+  border: 1px solid #ccc;  
+  padding: 10px;
+  background-color: rgba(204,204,204,0.9);
+}
+
 
 
 /* Modal de alertas */

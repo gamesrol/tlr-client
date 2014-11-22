@@ -8,10 +8,10 @@
 	  <div id="logeo" class="col-lg-4">
 	    <div class="input-group">
 	    	<span class="input-group-btn">
-	        <button class="btn btn-default" type="button" ng-click="myStyle={'background-color':'blue'}" title="Opciones"><span class="glyphicon glyphicon-plus"></span></button>
+	        <button class="btn btn-default" type="button" ng-click="myStyle={'background-color':'blue'}" title="Opciones"><span class="glyphicon glyphicon-cog"></span></button>
 			</span>
-			<input type="text" name="user" placeholder="Nick" class="form-control halt" id="login_user" ng-model="userLoginName">
-			<input type="password" name="password" placeholder="Password" class="form-control halt" id="login_password" ng-model="userLoginPassword">				      
+			<input type="text" name="user" placeholder="Nick" class="form-control halt" id="login_user" ng-model="userLoginName" autofocus>
+			<input type="password" name="password" placeholder="Password" class="form-control halt" id="login_password" ng-model="userLoginPassword">	      
 			<span class="input-group-btn">
 			<button class="btn btn-default" type="button" ng-click="login()"  ng-disabled="!userLoginName || !userLoginPassword" title="Entrar"><span class="glyphicon glyphicon-log-in"></span></button>
 	      </span>

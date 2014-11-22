@@ -1,0 +1,14 @@
+<form id="form-new">
+	<div id="menu-tumblear">
+		
+		<a class="postMuneco">
+			<img src="{{user.id}}">
+			{{user.name}}
+		</a>			
+		
+		<textarea class="form-control" ng-model="post.text" autofocus>
+			
+		</textarea>					
+		<button class="btn btn-default" ng-disabled="!post.text" type="button" ng-click="pub()" title="Opciones"><span class="glyphicon glyphicon-plus"> Publicar</span></button>		
+	</div>
+</form>

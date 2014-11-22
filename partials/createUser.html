@@ -1,14 +1,14 @@
 <div id="reg" class="row">
 	<h1>Registrate</h1>
-	<form>
+	<form id="registro">
 		<div>
-			<input type="text" name="name" id="user_name" placeholder="Name" class="form-control" ng-model="user.name"/>  
-			<input type="text" name="profile" id="user_profile" placeholder="Profile" class="form-control" ng-model="user.profile"/>  
-			<input type="text" name="email" id="user_email" placeholder ="Email" class="form-control" ng-model="user.email"/>
-			<input type="password" name="password" id="user_password" placeholder ="Password" class="form-control" ng-model="user.password"/>
-			<input type="password" name="passwordpassword_confirmation" id="user_password_confirmation" placeholder="Password Confirmation" class="form-control" ng-model="user.passwordConfirmation"/>
+			<input type="text" id="user_name" placeholder="Name" class="form-control" ng-model="user.name"/>  
+			<input type="text" id="user_profile" placeholder="Profile" class="form-control" ng-model="user.profile"/>  
+			<input type="text" id="user_email" placeholder ="Email" class="form-control" ng-model="user.email"/>
+			<input type="password" id="user_password" placeholder ="Password" class="form-control" ng-model="user.password"/>
+			<input type="password" id="user_password_confirmation" placeholder="Password Confirmation" class="form-control" ng-model="user.passwordConfirmation"/>
 			<button id="crearUser" ng-click="create()" class="form-control" >Crear usuarios</button>
-			<input type="checkbox" name="accept" id="user_accept" class="form-control" ng-model="user.accept"/><label for="user_accept">Acceptar condiciones</label>
+			<input type="checkbox" id="user_accept" class="form-control" ng-model="user.accept"/><label for="user_accept">Acceptar condiciones</label>
 		</div>
 	<form>
 </div>

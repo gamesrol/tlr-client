@@ -15,7 +15,8 @@
 		<script src="http://code.angularjs.org/1.2.26/angular-sanitize.min.js"></script>
 		<script src="http://code.angularjs.org/1.2.26/angular-route.js"></script>
 		<script src="http://code.angularjs.org/1.2.26/angular-resource.min.js"></script>		
-		<script src="http://code.angularjs.org/1.2.26/angular-cookies.js"></script>				
+		<script src="http://code.angularjs.org/1.2.26/angular-cookies.js"></script>		
+		<script src="js/libs/ng-infinite-scroll.min.js"></script>		
 		<script src="http://m-e-conroy.github.io/angular-dialog-service/javascripts/dialogs.v2.min.js"></script>
 		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.2.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -24,9 +25,9 @@
 	</head>
 
 	<body>
-		<header class="fixed" id="topbar" ng-controller="login" ng-style="myStyle">	
-			<div class="searcher" ng-if="athu" ng-include src="'partials/topbar/authenticated.html'"></div>
-			<div class="searcher" ng-if="!athu" ng-include src="'partials/topbar/login.html'"></div>
+		<header id="topbar" ng-controller="login">	
+			<div ng-if="athu" ng-include src="'partials/topbar/authenticated.html'"></div>
+			<div ng-if="!athu" ng-include src="'partials/topbar/login.html'"></div>
 		</header>
 
 		<div class="container">
